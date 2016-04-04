@@ -11,6 +11,9 @@
     "angular-loader": "~1.4.0",
     "angular-mocks": "~1.4.0",
     "html5-boilerplate": "~5.2.0",
-    "scriptjs": "^2.5.8"
+    "scriptjs": "^2.5.8",
+    "bootstrap": "^3.3.6",
+    "angular-moment": "^0.10.3",
+    "moment": "^2.12.0"
   }
 }

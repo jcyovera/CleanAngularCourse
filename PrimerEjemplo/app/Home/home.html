@@ -1,3 +1,56 @@
-<p>This is the partial for view 1.</p>
-<input type="text" name="firstname" ng-model="FirstData">
-<div>{{FirstData}}</div>
+
+<div class="container" ng-cloak>
+	<div class="row">
+		<div class="col-lg-3 col-sm-6">
+			<button class="btn" ng-click="home.reload()">R</button>
+			<button class="btn" ng-click="home.goToSearch()">Go</button>
+			<div>
+				<span am-time-ago="home.ProfileData.created_at | amCalendar"></span>
+
+				<div moment-picker="home.ProfileData.created_at"> {{ home.ProfileData.created_at  }} </div>
+			</div>
+            <div class="card hovercard">
+                <div class="cardheader">
+
+                </div>
+                <div class="avatar">
+
+                    <img alt="" ng-src="{{home.ProfileData.avatar_url}}" >
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <a target="_blank" href="{{home.ProfileData.blog}}">{{home.ProfileData.name}}</a>
+                    </div>
+                    <div class="desc">{{home.ProfileData.login}}</div>
+                    <div class="desc">{{home.ProfileData.company}}</div>
+                    <div class="desc">{{home.ProfileData.location}}</div>
+                </div>
+                <div class="bottom">
+                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-danger btn-sm" rel="publisher"
+                       href="https://plus.google.com/+">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="https://plus.google.com/">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/">
+                        <i class="fa fa-behance"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-9 col-sm-6">
+          <br>
+          <div class="panel panel-info" ng-repeat="repo in home.Repositories">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{repo.name}}</h3> </div>
+              <div class="panel-body"> {{repo.description}} </div>
+          </div>
+
+	</div>
+</div>
