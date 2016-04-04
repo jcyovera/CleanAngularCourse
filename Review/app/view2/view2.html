@@ -1,0 +1,20 @@
+<div>
+  <div first-directive title-page="view2.titlePage">
+  </div>
+  <div class="bar">
+    <input type="text" placeholder="Enter your search text" ng-model="view2.searchString">
+  </div>
+  <ul class="searchList">
+    <li ng-repeat="i in view2.items  | searchFor:view2.searchString">
+      <a href="{{i.url}}"><img ng-src="{{i.image}}" /></a>
+      <p>{{i.title}}</p>
+    </li>
+  </ul>
+</div>
+
+
+
+<p>
+  Showing of 'interpolate' filter:
+  {{ 'Current version is v%VERSION%.' | interpolate }}
+</p>
