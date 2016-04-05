@@ -1,0 +1,12 @@
+<div class="col-lg-4">
+<div class="comments">
+  <form name="commentForm" ng-submit="commentForm.$valid && commentCtrl.addComment()" novalidate>
+    <h4>Add Comment</h4>
+      <textarea ng-model="commentCtrl.comment.body" cols="30" rows="10" required></textarea>
+    <label for="">by:</label>
+      <input type="text" ng-model="commentCtrl.comment.author" required placeholder="Name"/>
+      <br>
+      <input type="submit" value="Submit" class="btn btn-success" />
+    </form>
+</div>
+</div>

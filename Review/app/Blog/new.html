@@ -1,0 +1,19 @@
+<div class="col-lg-4">
+<div class="post">
+  <h2>Add New Post</h2>
+
+  <form name="postForm" ng-submit=" blog.addPost()" novalidate>
+          <h4>Title</h4>
+          <input type="text" ng-model="blog.post.title"/>
+          <h4>Body</h4>
+          <textarea ng-model="blog.post.body" ng-list="/\n/" rows="10"></textarea>
+          <label for="">Featured Image URL</label>
+          <input type="text" ng-model="blog.post.image" placeholder="http://placekitten.com/g/2000/600" />
+          <label for="">by:</label>
+          <input type="text" ng-model="blog.post.author" placeholder="Author Name" required/>
+          <br>
+          <input type="submit" value="Submit" class="btn btn-success"/>
+        </select></form>
+
+    </div>
+</div>
