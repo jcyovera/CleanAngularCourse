@@ -1,0 +1,26 @@
+<div class="post" ng-if="post.postValue.id">
+  <div>
+    <a ng-click="post.backPage()">Return to posts</a>
+    <h2>{{post.postValue.title}}</h2>
+    <img ng-src="{{post.postValue.image}}" width="550"/>
+    <br>
+    <cite>by {{post.postValue.author}} on {{post.postValue.createdOn | date}}</cite>
+    <div class="post-body">
+     <p ng-repeat="paragraph in post.postValue.body">
+       {{paragraph}}
+     </p>
+    </div>
+    <div class="comments">
+      <button class="fa fa-heart" ng-click="post.addLike(post.postValue)"> {{post.postValue.likes}}</button>
+      <a href="#/newComment/{{post.postValue.id}}">Add comment</a>
+      <h3>Comments</h3>
+
+      <ul>
+       <li ng-repeat="comment in post.postValue.comments">
+         "{{comment.body}}"
+         <cite>- <b>{{comment.author}}</b></cite>
+       </li>
+      </ul>
+    </div>
+  </div>
+</div>

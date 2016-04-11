@@ -1,5 +1,19 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <ul class="post-grid">
+      								<div class="col-lg-4 col-sm-4" ng-repeat="post in blog.posts" ng-if="blog.showPosts">
+      									<li   ng-click="blog.openPost(post)" >
+      										<h3>{{post.title}}</h3>
+      										<p>{{post.body[0] | limitTo:70}}...</p>
+      										<p class="fa fa-comment push-left"> {{post.comments.length}}
+      										</p>
+      										<p class="fa fa-heart push-right"> {{post.likes}}
+      										</p>
+      									</li>
+      							</div>
+                    <div post-directive post-value="blog.selectedPost" show-post="blog.showPosts">
+      </ul>
+    </div>
+  </div>
+</div>
