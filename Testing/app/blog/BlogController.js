@@ -2,8 +2,8 @@
   angular
       .module('myApp.blog')
       .controller('BlogController', BlogController);
-  BlogController.$inject = ['$http'];
-  function BlogController($http) {
+  BlogController.$inject = ['blogFactory'];
+  function BlogController(blogFactory) {
 
   };
 })(window.angular);

@@ -1,6 +1,6 @@
 (function (angular) {
     angular
-        .module('blogApp.blog')
+        .module('myApp.blog')
         .factory('blogFactory', blogFactory);
     blogFactory.$inject = ['$http'];
     function blogFactory($http) {
