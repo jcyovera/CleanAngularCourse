@@ -1,4 +1,6 @@
 (function (angular) {
+  'use strict';
+
   angular
       .module('myApp.blog')
       .controller('BlogController', BlogController);

@@ -1,4 +1,5 @@
 (function (angular) {
+  'use strict';
   angular
       .module('myApp.example')
       .controller('ExampleController', ExampleController);
